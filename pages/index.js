@@ -2,16 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
-/*export async function getServerSideProps() {
-  const res = await fetch("http://jsonplaceholder.typicode.com/todos");
-  const data = await res.json();
-  return {
-    props: {
-      todos: data,
-    },
-  };
-}*/
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch("http://jsonplaceholder.typicode.com/todos");
   const data = await res.json();
   return {
@@ -20,6 +11,15 @@ export async function getStaticProps() {
     },
   };
 }
+/*export async function getStaticProps() {
+  const res = await fetch("http://jsonplaceholder.typicode.com/todos");
+  const data = await res.json();
+  return {
+    props: {
+      todos: data,
+    },
+  };
+}*/
 
 function TodosPage({ todos }) {
   return (

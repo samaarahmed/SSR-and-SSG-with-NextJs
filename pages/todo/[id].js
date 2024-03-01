@@ -3,7 +3,6 @@ import Link from "next/link";
 
 // Server-side rendering SSR
 
-/*
 export async function getServerSideProps({ params }) {
   const res = await fetch(
     `http://jsonplaceholder.typicode.com/todos/${params.id}`
@@ -14,9 +13,9 @@ export async function getServerSideProps({ params }) {
       todos: data,
     },
   };
-}*/
+}
 
-// Static site genration SSG functions
+/* Static site genration SSG functions
 
 export async function getStaticPaths() {
   const res = await fetch("http://jsonplaceholder.typicode.com/todos");
@@ -39,7 +38,7 @@ export async function getStaticProps({ params }) {
       todos: data,
     },
   };
-}
+}*/
 
 function TodoDetails({ todos }) {
   return (
